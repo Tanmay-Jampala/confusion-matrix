@@ -1,4 +1,5 @@
 "use client";
+import { asset } from "./paths";
 /**
  * All textures are generated in the browser (no image files):
  *  - film grain: random noise tile
@@ -71,7 +72,7 @@ let worker: Worker | null | undefined;
 function getWorker(): Worker | null {
   if (worker !== undefined) return worker;
   try {
-    worker = typeof Worker !== "undefined" && typeof OffscreenCanvas !== "undefined" ? new Worker("/leather-worker.js") : null;
+    worker = typeof Worker !== "undefined" && typeof OffscreenCanvas !== "undefined" ? new Worker(asset("/leather-worker.js")) : null;
   } catch {
     worker = null;
   }

@@ -5,6 +5,7 @@ import { useStore, useMotion } from "@/lib/store";
 import { scrollToId } from "@/lib/scroll";
 import { useFocusTrap } from "@/components/ui/useFocusTrap";
 import { COURSE_LINE } from "@/content/site";
+import { asset } from "@/lib/paths";
 
 const LINKS = [
   ["Home", "top"],
@@ -77,7 +78,7 @@ export default function Menu() {
         </ul>
         <div className="flex flex-col gap-4 border-t border-bone/15 pt-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="flex gap-6 text-[15px]">
-            <a href="/report.pdf" className="link-draw" download>
+            <a href={asset("/report.pdf")} className="link-draw" download>
               Report PDF
             </a>
             <a

@@ -1,5 +1,6 @@
 "use client";
 import { scrollToId } from "@/lib/scroll";
+import { asset } from "@/lib/paths";
 import { COURSE, ILLUSTRATIVE_NOTE, REFERENCES, TEAM, TITLE } from "@/content/site";
 import Section from "@/components/ui/Section";
 import HeroMatrix3D from "@/components/hero/HeroMatrix3D";
@@ -72,7 +73,7 @@ export default function Footer() {
                   </li>
                 ))}
                 <li>
-                  <a href="/report.pdf" download className="link-draw text-gold-bright">
+                  <a href={asset("/report.pdf")} download className="link-draw text-gold-bright">
                     Report PDF ↓
                   </a>
                 </li>
