@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+*.tsbuildinfo
+next-env.d.ts
+
+# Report PDF contains student USNs and a group photo; add the edited copy deliberately (git add -f)
+docs/report.pdf
+public/report.pdf
