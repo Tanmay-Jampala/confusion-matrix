@@ -1,5 +1,7 @@
 # Confusion Matrix: an interactive explainer
 
+**Live site:** https://tanmay-jampala.github.io/confusion-matrix/
+
 A scroll-driven, single-page site for the experiential-learning project **"Application of Matrices in Classification Model Evaluation"**
 (25BSMA01 · Matrix Algebra and Calculus · B.Tech CSE AIML-G · Jain (Deemed-to-be) University).
 
@@ -17,6 +19,11 @@ npm test           # metric engine tests (Vitest)
 npm run build      # static export into out/
 npm start          # serves out/ (npx serve) to check the production build
 ```
+
+## Deploy to GitHub Pages
+
+Every push to `main` runs `.github/workflows/pages.yml`, which tests, builds with `BASE_PATH=/confusion-matrix` and deploys `out/` to
+https://tanmay-jampala.github.io/confusion-matrix/. To preview that build locally in Git Bash: `MSYS_NO_PATHCONV=1 BASE_PATH=/confusion-matrix npm run build`.
 
 ## Deploy to Netlify
 
